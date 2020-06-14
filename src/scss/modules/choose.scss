@@ -1,0 +1,22 @@
+.choose {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    &__item {
+        display: flex;
+        flex-flow: column;
+        
+    }
+    &__color {
+        width: 150px;
+    }
+    &__size {
+        width: 150px;
+    }
+    &__font {
+        width: 150px;
+    }
+}
+ 

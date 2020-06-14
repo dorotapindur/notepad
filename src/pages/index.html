@@ -143,32 +143,38 @@
   <body>
     <main class="main">
       <h1 class="header">notepad</h1>
-      <p>
+      <div class="text">
         <textarea class="textarea text--js" type="text" placeholder="enter your text here" name="textarea"></textarea>
-      </p>
+      </div>
       <div class="buttons">
         <button class="buttons__button buttons__button--save save--js" aria-label="save">save</button>
         <button class="buttons__button buttons__button--clear clear--js" aria-label="clear">clear</button>
         <button class="buttons__button buttons__button--load load--js" aria-label="load">load</button>
       </div>
       <div class="choose">
-        <label for="color" class="choose__label"></label>
-        <input class="choose__color color--js" type="color" name="color" id="color">
-        <label for="size" class="choose__label"></label>
-        <select class="choose__size size--js" name="size" id="size">
-          <option class="choose__option" value="8px">8px</option>
-          <option class="choose__option" value="10px">10px</option>
-          <option class="choose__option" value="12px">12px</option>
-          <option class="choose__option" value="14px">14px</option>
-          <option class="choose__option" value="16px">16px</option>
-          <option class="choose__option" value="20px">20px</option>
-        </select>
-        <label for="font" class="choose__label"></label>
-        <select name="font" id="font" class="choose__font font--js">
-          <option class="choose__option" value="font 1">font 1</option>
-          <option class="choose__option" value="font 2">font 2</option>
-          <option class="choose__option" value="font 3">font 3</option>
-        </select>
+        <div class="choose__item">
+          <label for="color" class="choose__label">color</label>
+          <input class="choose__color color--js" type="color" name="color" id="color">
+        </div>
+        <div class="choose__item">
+          <label for="size" class="choose__label">size</label>
+          <select class="choose__size size--js" name="size" id="size">
+            <option class="choose__option" value="8px">8px</option>
+            <option class="choose__option" value="10px">10px</option>
+            <option class="choose__option" value="12px">12px</option>
+            <option class="choose__option" value="14px">14px</option>
+            <option class="choose__option" value="16px">16px</option>
+            <option class="choose__option" value="20px">20px</option>
+          </select>
+        </div>
+        <div class="choose__item">
+          <label for="font" class="choose__label">font</label>
+          <select name="font" id="font" class="choose__font font--js">
+            <option class="choose__option" value="font 1">font 1</option>
+            <option class="choose__option" value="font 2">font 2</option>
+            <option class="choose__option" value="font 3">font 3</option>
+          </select>
+        </div>
       </div>
     </main>
   </body>

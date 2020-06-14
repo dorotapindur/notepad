@@ -1,7 +1,9 @@
 .buttons {
     display: flex;
-    justify-items: space-between;
+    justify-content: space-between;
     width: 600px;
+    grid-column: 1 / 2;
+    grid-row: 3;
 }
 
 .buttons__button {

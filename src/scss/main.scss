@@ -3,6 +3,7 @@
 @import "_variables";
 @import "modules/hello.scss";
 @import "./modules/buttons.scss";
+@import "./modules/choose.scss";
 
 body {
   background: gray;
@@ -13,7 +14,19 @@ body {
   min-height: 100vh;
 }
 
-
+.main {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.header {
+  grid-column: 1 / 3;
+}
+.text {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
 .textarea {
   width: 600px;
   height: 400px;
