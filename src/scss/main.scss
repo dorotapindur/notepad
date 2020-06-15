@@ -57,7 +57,6 @@ body {
   font-family: var(--font);
   font-size: var(--size);
   &::placeholder {
-    color: var(--color);
-    opacity: 50%;
+    color: red;
   }
 }
