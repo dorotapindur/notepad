@@ -58,5 +58,6 @@ body {
   font-size: var(--size);
   &::placeholder {
     color: var(--color);
+    opacity: 0.5;
   }
 }
