@@ -1,8 +1,9 @@
 //choose color
 
-var colorInput = document.getElementById("color");
-   
+export const colorInput = document.getElementById("color");
+export let theColor = colorInput.value;
+
 colorInput.addEventListener("input", function() {
-  var theColor = colorInput.value;
+  theColor = colorInput.value;
   document.documentElement.style.setProperty('--color', theColor);
 });

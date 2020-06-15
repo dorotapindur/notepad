@@ -9,6 +9,9 @@ import * as size from './modules/size.js';
 
 /* place your code below */
 
+import {theColor} from './modules/color.js';
+import {colorInput} from './modules/color.js';
+
 console.log(`HELLO 🚀 I'm trying to make a notepad`);
 
 color;
@@ -16,6 +19,8 @@ color;
 font;
 
 size;
+
+localStorage.clear();
 
 const textarea = document.querySelector('.text--js');
 
@@ -25,13 +30,24 @@ const loadButton = document.querySelector('.load--js');
 
 const clearButton = document.querySelector('.clear--js');
 
+const entry = localStorage.getItem('saved');
+let result = '';
+ if (entry) {
+     result = entry;
+ }
+ 
+textarea.value = result;
+
 saveButton.addEventListener('click', () => {
-    localStorage.setItem('saved', textarea.value);
+    localStorage.setItem('saved', textarea.value);   
+    localStorage.setItem('savedColor', theColor);
     console.log("saved"); 
 });
 
 loadButton.addEventListener('click', () => {  
-    textarea.value = localStorage.getItem('saved', textarea.value);   
+    textarea.value = localStorage.getItem('saved');  
+    colorInput.value = localStorage.getItem('savedColor'); 
+    document.documentElement.style.setProperty('--color', colorInput.value);
     console.log('loaded');
 });
 
