@@ -9,14 +9,41 @@
         flex-flow: column;
         
     }
-    &__color {
+    &__input {
         width: 150px;
+        height: 64px;
+        border-radius: 5px;
+        &--font {
+            font-family: var(--font);
+        }
+        &--size {
+            font-size: var(--size);
+        }
     }
-    &__size {
-        width: 150px;
-    }
-    &__font {
-        width: 150px;
+    &__option {
+        &--dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+        &--open-sans {
+            font-family: 'Open Sans', sans-serif;
+        }
+        &--pt-serif {
+            font-family: 'PT Serif', serif;
+        }
+        &--small {
+            font-size: 16px;
+        }
+        &--regular {
+            font-size: 20px;
+        }
+        &--large {
+            font-size: 24px;
+        }
+        &--very-large {
+            font-size: 28px;
+        }
     }
 }
+
+
  
