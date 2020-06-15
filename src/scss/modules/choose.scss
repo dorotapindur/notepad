@@ -6,8 +6,10 @@
     flex-flow: column;
     &__item {
         display: flex;
-        flex-flow: column;
-        
+        flex-flow: column;        
+    }
+    &__label {
+        margin-bottom: 4px;
     }
     &__input {
         width: 150px;

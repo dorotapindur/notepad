@@ -16,12 +16,13 @@ html {
 
 :root {
   --font: 'Dancing Script', cursive;
-  --color: rgb(0, 128, 0);
+  --color: black;
   --size: 16px;
 }
 
 body {
-  background: gray;
+  background-color: gray;
+  background-image: url(../assets/img/blank-composition-desk-journal-606539.jpg);
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   display: flex;
@@ -32,7 +33,7 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: 600px 250px;
+  grid-template-columns: 600px auto;
   column-gap: 10px;
   row-gap: 10px;
 }
@@ -49,6 +50,7 @@ body {
 .textarea {
   width: 100%;
   height: 100%;
+  border: solid 3px rgb(160, 160, 160);
   border-radius: 10px;
   padding: 10px;
   color: var(--color);
