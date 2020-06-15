@@ -1,18 +1,6 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![preview](src/assets/img/readme-image.png)
 
-# WTF Webpack Starter Kit 
+# notepad
 
-Simple toolkit for your static websites development.
-
-## How to use it?
-
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
-
-## Available scripts
-
-`npm run start` - runs development mode
-
-`npm run build` - runs build process for production
-
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
+try it on [https://dorotapindur.github.io/notepad/](https://dorotapindur.github.io/notepad/)
 
