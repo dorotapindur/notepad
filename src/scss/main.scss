@@ -21,14 +21,19 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(0, 0, 0);
   background-image: url(../assets/img/blank-composition-desk-journal-606539.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  @media (min-height: 1250px) {
+    background-position: center center;
+  }
 }
 
 .main {
@@ -36,21 +41,38 @@ body {
   grid-template-columns: 600px auto;
   column-gap: 10px;
   row-gap: 10px;
+  margin: 0;
+  @media (max-width: 800px) {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
 }
 .header {
   grid-column: 1 / 3;
   margin: 0;
+  text-shadow: 3px 3px 5px #00000080; 
+  @media (max-width: 800px) {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+  }
 }
 .text {
   grid-column: 1 / 2;
   grid-row: 2;
   width: 600px;
   height: 400px;
+  @media (max-width: 800px) {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
 }
 .textarea {
   width: 100%;
   height: 100%;
-  border: solid 3px rgb(160, 160, 160);
+  box-shadow: 5px 5px 5px #00000080; 
   border-radius: 10px;
   padding: 10px;
   color: var(--color);

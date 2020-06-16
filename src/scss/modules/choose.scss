@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-between;
     flex-flow: column;
+    @media (max-width: 800px) {
+        grid-column: 1;
+        grid-row: 2;
+        flex-flow: row;
+        width: 100%;
+      }
     &__item {
         display: flex;
         flex-flow: column;        
@@ -15,6 +21,11 @@
         width: 150px;
         height: 64px;
         border-radius: 5px;
+        border: none;
+        box-shadow: 5px 5px 5px #00000080; 
+        @media (max-width: 500px) {
+            width: 75px;
+        }
         &--font {
             font-family: var(--font);
         }
