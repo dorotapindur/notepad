@@ -39,9 +39,10 @@ body {
 .main {
   display: grid;
   grid-template-columns: 600px auto;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 15px;
+  row-gap: 15px;
   margin: 0;
+  padding: 10px 0 20px;
   @media (max-width: 800px) {
     width: 90vw;
     grid-template-columns: 1fr;
@@ -68,12 +69,16 @@ body {
     grid-row: 3;
     width: 100%;
   }
+  @media (max-height: 700px) {
+    height: 250px;
+  }
 }
 .textarea {
   width: 100%;
   height: 100%;
   box-shadow: 5px 5px 5px #00000080; 
   border-radius: 10px;
+  border: none;
   padding: 10px;
   color: var(--color);
   font-family: var(--font);
