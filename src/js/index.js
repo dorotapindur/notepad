@@ -28,18 +28,23 @@ const loadButton = document.querySelector('.load--js');
 
 const clearButton = document.querySelector('.clear--js');
 
-const entry = localStorage.getItem('saved');
+//sprawdza, czy coś jest w local storage
+let entry = localStorage.getItem('saved');
  if (entry) {
-     document.querySelector('.info--js').innerHTML = 'ℹ️';
+     document.querySelector('.info--js').innerHTML = ' ℹ️';
  }
  
 
 
 saveButton.addEventListener('click', () => {
+    //nie zapisuje, jeśli pole jest puste
+    if (textarea.value) {
     localStorage.setItem('saved', textarea.value);   
     localStorage.setItem('savedColor', theColor);
     console.log("saved"); 
-    document.querySelector('.info--js').innerHTML = 'ℹ️';
+    entry = localStorage.getItem('saved');
+    document.querySelector('.info--js').innerHTML = ' ℹ️';
+    }
 });
 
 loadButton.addEventListener('click', () => {  
@@ -53,6 +58,9 @@ loadButton.addEventListener('click', () => {
 clearButton.addEventListener('click', () => {  
     textarea.value = '';   
     console.log('cleared');
+    if (entry) {
+        document.querySelector('.info--js').innerHTML = ' ℹ️';
+    }
 });
 
 
