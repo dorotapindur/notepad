@@ -20,8 +20,6 @@ font;
 
 size;
 
-localStorage.clear();
-
 const textarea = document.querySelector('.text--js');
 
 const saveButton = document.querySelector('.save--js');
@@ -31,17 +29,17 @@ const loadButton = document.querySelector('.load--js');
 const clearButton = document.querySelector('.clear--js');
 
 const entry = localStorage.getItem('saved');
-let result = '';
  if (entry) {
-     result = entry;
+     document.querySelector('.info--js').innerHTML = 'ℹ️';
  }
  
-textarea.value = result;
+
 
 saveButton.addEventListener('click', () => {
     localStorage.setItem('saved', textarea.value);   
     localStorage.setItem('savedColor', theColor);
     console.log("saved"); 
+    document.querySelector('.info--js').innerHTML = 'ℹ️';
 });
 
 loadButton.addEventListener('click', () => {  
@@ -49,6 +47,7 @@ loadButton.addEventListener('click', () => {
     colorInput.value = localStorage.getItem('savedColor'); 
     document.documentElement.style.setProperty('--color', colorInput.value);
     console.log('loaded');
+    document.querySelector('.info--js').innerHTML = '';
 });
 
 clearButton.addEventListener('click', () => {  
