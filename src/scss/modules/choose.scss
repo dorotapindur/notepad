@@ -12,7 +12,8 @@
       }
     &__item {
         display: flex;
-        flex-flow: column;        
+        flex-flow: column;  
+        overflow-wrap: break-word;      
     }
     &__label {
         margin-bottom: 4px;
@@ -23,7 +24,7 @@
         border-radius: 5px;
         border: none;
         box-shadow: 5px 5px 5px #00000080; 
-        @media (max-width: 500px) {
+        @media (max-width: 520px) {
             width: 75px;
         }
         &--font {
